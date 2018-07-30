@@ -16,7 +16,8 @@
 .del {
   background-color: lightcoral;
   padding: 2%;
-  border-radius: 10px;
+  border-radius: 5px;
+  margin-left: 1.5em;
 }
 
 ul {
@@ -32,4 +33,16 @@ li {
 
 li:hover {
   cursor: pointer;
+}
+
+.l
+{
+  display: inline-block;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 5px;
 }

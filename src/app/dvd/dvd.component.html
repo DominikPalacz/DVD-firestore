@@ -3,7 +3,7 @@
 
   <ul *ngFor="let dvd of dvds | async">
     <li (click)="getDvd(dvd.id)">
-      <span>{{dvd.data.id}} {{dvd.data.title}} <span class="del"><a href="#" (click)="deleteDvd(dvd.id)">Delate</a></span></span>
+      <span class="l">{{dvd.data.id}}</span> {{dvd.data.title}} <span class="del"><a href="#" (click)="deleteDvd(dvd.id)">Delate</a></span>
     </li>
   </ul>
 
