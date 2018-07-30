@@ -1,18 +1,18 @@
 <div class="color">
-  <p>------------dvd.component.html------------</p>
+
 
   <ul *ngFor="let dvd of dvds | async">
     <li (click)="getDvd(dvd.id)">
-      <span>{{dvd.data.id}} {{dvd.data.title}} (<a href="#" (click)="deleteDvd(dvd.id)">Delate</a>)</span>
+      <span>{{dvd.data.id}} {{dvd.data.title}} <span class="del"><a href="#" (click)="deleteDvd(dvd.id)">Delate</a></span></span>
     </li>
   </ul>
 
 
-  <h1>A Detail:</h1>
-<div class="detail">
-  <h3>{{ (dvd | async)?.id }}</h3>
-  <p> {{ (dvd | async)?.title }}</p>
-</div>
-  <p>------------dvd.component.html------------</p>
+  <h2><strong>A Detail:</strong></h2>
+  <div class="detail">
+    <h3>{{ (dvd | async)?.id }}</h3>
+    <p> {{ (dvd | async)?.title }}</p>
+  </div>
+
 
 </div>

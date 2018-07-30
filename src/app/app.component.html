@@ -1,35 +1,22 @@
 <div class="color1">
-<p>***********************************app***********************************</p>
-<h1>{{titleApp}}</h1>
-<!--<p>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;lista-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
 
-<!--<ul *ngFor="let dvd of dvds | async">-->
-  <!--<li (click)="getDvd(dvd.id)">-->
-    <!--<span>{{dvd.data.id}} {{dvd.data.title}} (<a href="#" (click)="deleteDvd(dvd.id)">Delate</a>)</span>-->
-  <!--</li>-->
-<!--</ul>-->
+  <h1>{{titleApp}}</h1>
 
-<!--<p>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;lista-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
 
-<div class="colorA">
-<p>------------form add------------</p>
+  <div class="colorA">
 
-<input type="text" [(ngModel)]="id" name="id" placeholder="id..">
-<textarea [(ngModel)]="title" name="title" placeholder="title.."></textarea>
-<input type="submit" value="Add a dvd" (click)="addDvd()">
 
-<p>------------form add------------</p>
+    <input type="text" [(ngModel)]="id" name="id" placeholder="id..">
+    <br>
+    <textarea [(ngModel)]="title" name="title" placeholder="title.."></textarea>
+    <br>
+    <input type="submit" value="Add a dvd" (click)="addDvd()">
+
+
+  </div>
+
+
 </div>
 
-<!--<p>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;spec&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
-
-<!--<h1>A Detail:</h1>-->
-
-<!--<h3>{{ (dvd | async)?.id }}</h3>-->
-<!--<p> {{ (dvd | async)?.title }}</p>-->
-
-<!--<p>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;spec&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
 
 <app-dvd></app-dvd>
-<p>***********************************app***********************************</p>
-</div>
