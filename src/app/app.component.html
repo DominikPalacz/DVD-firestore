@@ -2,9 +2,11 @@
 <h1>{{titleApp}}</h1>
 <p>-------------lista-------------</p>
 
-<ul>
-  <li *ngFor="let dvd of dvd | async" (click)="getDvd(dvd.id)">
-    <span>{{dvd.data.id}}</span>{{dvd.data.title}}
+<ul *ngFor="let dvd of dvds | async">
+  <li (click)="getDvd(dvd.id)">
+    <span>{{dvd.data.id}}</span>
+
+    {{dvd.data.title}}
   </li>
 </ul>
 
@@ -18,6 +20,16 @@
 <input type="submit" value="Add a dvd" (click)="addDvd()">
 
 <p>------------form add------------</p>
+
+
+<p>------------spec------------</p>
+
+<h1>A Detail:</h1>
+
+<h3>{{ (dvd | async)?.id }}</h3>
+<p> {{ (dvd | async)?.title }}</p>
+
+<p>------------spec------------</p>
 
 
 <p>***********************************app***********************************</p>

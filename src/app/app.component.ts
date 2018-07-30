@@ -9,7 +9,7 @@ interface Dvd {
   content: string;
 }
 interface DvdId extends Dvd {
-  id: string
+  id: string;
 }
 
 @Component({
@@ -22,10 +22,13 @@ export class AppComponent {
   titleApp = 'Dvd app Dominik Palacz';
 
   dvdCollection: AngularFirestoreCollection<Dvd>;
-  dvd: any; //Observable<Dvd[]>;
+  dvds: any; //Observable<Dvd[]>;
 
   id: string;
   title: string;
+
+  dvdDoc: AngularFirestoreDocument<Dvd>;
+  dvd: Observable<Dvd>;
 
   constructor(private afs: AngularFirestore){
 
@@ -34,7 +37,7 @@ export class AppComponent {
   ngOnInit(){
     this.dvdCollection = this.afs.collection('dvd');
     //this.dvd = this.dvdCollection.valueChanges();
-    this.dvd = this.dvdCollection.snapshotChanges()
+    this.dvds = this.dvdCollection.snapshotChanges()
       .map(actions => {
         return actions.map(a => {
           const data = a.payload.doc.data() as Dvd;
@@ -48,6 +51,9 @@ export class AppComponent {
     this.afs.collection('dvd').add({'id': this.id, 'title': this.title})
   }
 
-
+  getDvd(dvdId) {
+    this.dvdDoc = this.afs.doc('dvd/'+dvdId);
+    this.dvd = this.dvdDoc.valueChanges();
+  }
 
 }
