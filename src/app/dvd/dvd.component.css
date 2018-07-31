@@ -46,3 +46,8 @@ li:hover {
   margin-right: .8em;
   border-radius: 5px;
 }
+
+.selected {
+  background-color: #336699;
+  color: #ffffff;
+}

@@ -8,6 +8,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { FormsModule } from '@angular/forms';
 import { DvdComponent } from './dvd/dvd.component';
+import { DvdDetailComponent } from './dvd-detail/dvd-detail.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyAmON0ZMCgdy2Nqs-DgfC5_T0d_tGj7Gbs",
@@ -21,7 +22,8 @@ var firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    DvdComponent
+    DvdComponent,
+    DvdDetailComponent
   ],
   imports: [
     BrowserModule,

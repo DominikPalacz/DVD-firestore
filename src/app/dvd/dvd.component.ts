@@ -16,6 +16,8 @@ export class DvdComponent implements OnInit {
   dvdDoc: AngularFirestoreDocument<Dvd>;
   dvd: Observable<Dvd>;
 
+  selectedDvd: Dvd;
+
   constructor(private afs: AngularFirestore) {
   }
 
@@ -41,5 +43,8 @@ export class DvdComponent implements OnInit {
     this.afs.doc('dvd/' + dvdId).delete();
   }
 
+  onSelect(dvd: Dvd) {
+    this.selectedDvd = dvd;
+  }
 
 }
