@@ -1,8 +1,8 @@
 <div class="color">
 
-  <ul *ngFor="let dvd of dvds | async">
+  <ul *ngFor="let dvd of dvds | async" [class.selected]="dvd === selectedDvd">
     <li (click)="getDvd(dvd.id)" (click)="onSelect(dvd)"
-        [class.selected]="dvd === selectedDvd">
+        >
       <span class="l">{{dvd.data.id}}</span> {{dvd.data.title}} <span class="del"><a href="#"
             (click)="deleteDvd(dvd.id)">Delate</a></span>
     </li>
