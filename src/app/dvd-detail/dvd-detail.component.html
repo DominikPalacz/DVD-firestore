@@ -1,6 +1,6 @@
 <div *ngIf="dvd" class="detail">
-  <h2><strong>A Detail:</strong></h2>
 
+  <h2><strong>A Detail:</strong></h2>
   <h2>{{dvd.data.title | uppercase}} Details</h2>
   <div><span>id: </span>{{dvd.id}}</div>
   <div>
@@ -8,4 +8,5 @@
       <input [(ngModel)]="dvd.data.title" placeholder="name">
     </label>
   </div>
+
 </div>
