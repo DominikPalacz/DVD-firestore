@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Dvd } from '../app.component';
 
 @Component({
   selector: 'app-dvd-detail',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dvd-detail.component.css']
 })
 export class DvdDetailComponent implements OnInit {
+
+  @Input() dvd: Dvd;
 
   constructor() { }
 

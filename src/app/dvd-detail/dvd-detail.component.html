@@ -1,5 +1,11 @@
-<h2><strong>A Detail:</strong></h2>
-<div class="detail">
-  <h3>{{ (dvd | async)?.id }}</h3>
-  <p> {{ (dvd | async)?.title }}</p>
+<div *ngIf="dvd" class="detail">
+  <h2><strong>A Detail:</strong></h2>
+
+  <h2>{{dvd.data.title | uppercase}} Details</h2>
+  <div><span>id: </span>{{dvd.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="dvd.data.title" placeholder="name">
+    </label>
+  </div>
 </div>
