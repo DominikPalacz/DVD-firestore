@@ -28,6 +28,7 @@ nav a:visited, a:link {
 nav a:hover {
   color: #039be5;
   background-color: #cfd8dc;
+  transform: scale(1.2);
 }
 nav a.active {
   color: #039be5;
