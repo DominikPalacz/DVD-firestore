@@ -9,6 +9,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FormsModule } from '@angular/forms';
 import { DvdComponent } from './dvd/dvd.component';
 import { DvdDetailComponent } from './dvd-detail/dvd-detail.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 var firebaseConfig = {
   apiKey: "AIzaSyAmON0ZMCgdy2Nqs-DgfC5_T0d_tGj7Gbs",
@@ -29,7 +30,8 @@ var firebaseConfig = {
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
