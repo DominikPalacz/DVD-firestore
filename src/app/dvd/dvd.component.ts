@@ -11,13 +11,13 @@ import {DvdService} from '../dvd.service';
 })
 export class DvdComponent implements OnInit {
 
-  dvdCollection;
-  dvds;
+  dvdCollection: AngularFirestoreCollection<Dvd>;
+  dvds: any;
 
-  dvdDoc;
-  dvd;
+  dvdDoc: AngularFirestoreDocument<Dvd>;
+  dvd: any;;
 
-  selectedDvd;
+  selectedDvd: Dvd;
 
   constructor(private afs: AngularFirestore,
               private dvdServivice: DvdService) {
