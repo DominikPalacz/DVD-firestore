@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Dvd} from '../app.component';
 import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from 'angularfire2/firestore';
+import {DvdService} from '../dvd.service';
 
 @Component({
   selector: 'app-dvd',
@@ -10,41 +11,34 @@ import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} 
 })
 export class DvdComponent implements OnInit {
 
-  dvdCollection: AngularFirestoreCollection<Dvd>;
-  dvds: any; //Observable<Dvd[]>;
+  dvdCollection;
+  dvds;
 
-  dvdDoc: AngularFirestoreDocument<Dvd>;
-  dvd: Observable<Dvd>;
+  dvdDoc;
+  dvd;
 
-  selectedDvd: Dvd;
+  selectedDvd;
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore,
+              private dvdServivice: DvdService) {
   }
 
   ngOnInit() {
-    this.dvdCollection = this.afs.collection('dvd');
-    //this.dvd = this.dvdCollection.valueChanges();
-    this.dvds = this.dvdCollection.snapshotChanges()
-      .map(actions => {
-        return actions.map(a => {
-          const data = a.payload.doc.data() as Dvd;
-          const id = a.payload.doc.id;
-          return {id, data};
-        });
-      });
+    this.dvdCollection = this.dvdServivice.getDataServ();
+    this.dvds = this.dvdServivice.getDataS();
   }
 
   getDvd(dvdId) {
-    this.dvdDoc = this.afs.doc('dvd/' + dvdId);
-    this.dvd = this.dvdDoc.valueChanges();
+    this.dvdDoc = this.dvdServivice.getDvdDocS(dvdId);
+    this.dvd = this.dvdServivice.getDvdS(dvdId);
   }
 
   deleteDvd(dvdId) {
-    this.afs.doc('dvd/' + dvdId).delete();
+    this.dvdServivice.deleteDvdS(dvdId)
   }
 
   onSelect(dvd: Dvd) {
-    this.selectedDvd = dvd;
+    this.selectedDvd =  this.dvdServivice.onSelectS(dvd)
   }
 
 }
