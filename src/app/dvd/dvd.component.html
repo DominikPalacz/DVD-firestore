@@ -2,7 +2,7 @@
 
   <ul class="dvd" *ngFor="let dvd of dvds | async" [class.selected]="dvd === selectedDvd">
     <li (click)="getDvd(dvd.id)" (click)="onSelect(dvd)">
-      <span>{{dvd.data.id}}</span> {{dvd.data.title}} <span><a href="#" (click)="deleteDvd(dvd.id)">Delate</a></span>
+      <span><img src="{{dvd.data.id}}"></span> {{dvd.data.title}} <span><a href="#" (click)="deleteDvd(dvd.id)">Delate</a></span>
     </li>
   </ul>
 
@@ -10,7 +10,7 @@
 
   <div class="end" *ngIf="selectedDvd">
     <div>
-      <h1>{{ (dvd | async)?.id }} {{ (dvd | async)?.title }}</h1>
+      <h1><!--{{ (dvd | async)?.id }} -->{{ (dvd | async)?.title }}</h1>
     </div>
   </div>
 

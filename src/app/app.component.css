@@ -2,7 +2,7 @@
   height: 100vh;
   background-image: url("../assets/burn.jpg");
   background-size: cover;
-  font-family: "Caslon", "Tibetan Machine Uni", sans-serif ;
+  font-family: "Caslon", "Tibetan Machine Uni", sans-serif;
 }
 
 .header {
@@ -84,15 +84,15 @@
 }
 
 .c {
-padding: 10px;
-flex-grow: 1;
-background-color: #F5F5DC;
-opacity: .9;
-display: flex;
-justify-content: center;
+  padding: 10px;
+  flex-grow: 1;
+  background-color: #F5F5DC;
+  opacity: .9;
+  display: flex;
+  justify-content: center;
 }
 
-h2::first-letter{
+h2::first-letter {
   color: #00b7f5;
   font-size: 2em;
 }
