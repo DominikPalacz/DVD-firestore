@@ -18,6 +18,7 @@
 }
 
 .navigation {
+  font-weight: 900;
   list-style: none;
   margin: 0;
   background: deepskyblue;
@@ -89,6 +90,11 @@ background-color: #F5F5DC;
 opacity: .9;
 display: flex;
 justify-content: center;
+}
+
+h2::first-letter{
+  color: #00b7f5;
+  font-size: 2em;
 }
 
 
