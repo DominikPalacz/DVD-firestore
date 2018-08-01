@@ -18,7 +18,7 @@ export interface DvdId extends Dvd {
 })
 export class AppComponent {
 
-  titleApp = 'Dvd app Dominik Palacz';
+  titleApp = 'Dvd';
 
   id: string;
   title: string;

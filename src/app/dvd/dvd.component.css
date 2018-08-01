@@ -1,0 +1,32 @@
+.dvd {
+  background-color: black;
+  opacity: .9;
+  color: #ffffff;
+  font-size: 2em;
+  list-style-type: none;
+  width: 33vw;
+}
+.dvd li {
+  cursor: pointer;
+  background-color: #000;
+}
+
+.dvd li:hover {
+  color: #000000;
+  background-color: #DDD;
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+.dvd a {
+  color: maroon;
+  text-decoration: none;
+}
+
+.dvd a:hover {
+  color: red;
+}
+
+.end {
+  background-color: #00b7f5;
+}

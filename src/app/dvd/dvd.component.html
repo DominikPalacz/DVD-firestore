@@ -1,19 +1,16 @@
-<div class="color">
+<div>
 
-  <ul *ngFor="let dvd of dvds | async" [class.selected]="dvd === selectedDvd">
-    <li (click)="getDvd(dvd.id)" (click)="onSelect(dvd)"
-        >
-      <span class="l">{{dvd.data.id}}</span> {{dvd.data.title}} <span class="del"><a href="#"
-            (click)="deleteDvd(dvd.id)">Delate</a></span>
+  <ul class="dvd" *ngFor="let dvd of dvds | async" [class.selected]="dvd === selectedDvd">
+    <li (click)="getDvd(dvd.id)" (click)="onSelect(dvd)">
+      <span>{{dvd.data.id}}</span> {{dvd.data.title}} <span><a href="#" (click)="deleteDvd(dvd.id)">Delate</a></span>
     </li>
   </ul>
 
   <app-dvd-detail [dvd]="selectedDvd"></app-dvd-detail>
 
-  <div *ngIf="selectedDvd">
-    <div class="detail">
-      <h3>{{ (dvd | async)?.id }}</h3>
-      <p> {{ (dvd | async)?.title }}</p>
+  <div class="end" *ngIf="selectedDvd">
+    <div>
+      <h1>{{ (dvd | async)?.id }} {{ (dvd | async)?.title }}</h1>
     </div>
   </div>
 

@@ -1,21 +1,36 @@
-<div class="color1">
+<div class="container">
 
-  <h1>{{titleApp}}</h1>
-  <div class="colorA">
-    <input type="text" [(ngModel)]="id" name="id" placeholder="id..">
-    <br>
-    <textarea [(ngModel)]="title" name="title" placeholder="title.."></textarea>
-    <br>
-    <input type="submit" value="Add a dvd" (click)="addDvd()">
+  <div class="header">
+    <div class="cc"><h1>{{titleApp}}</h1></div>
+  </div>
+
+  <ul class="navigation">
+    <nav>
+      <li><a routerLink="/dvds">Dvds</a></li>
+      <li><a routerLink="/dashboard">Dashboard</a></li>
+    </nav>
+  </ul>
+
+  <div class="main">
+
+
+    <div class="l">
+      <div class="in">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <div class="c">
+      <div>
+        <input type="text" [(ngModel)]="id" name="id" placeholder="id..">
+        <br>
+        <textarea [(ngModel)]="title" name="title" placeholder="title.."></textarea>
+        <br>
+        <input type="submit" value="Add a dvd" (click)="addDvd()">
+      </div>
+    </div>
+
+
   </div>
 
 </div>
-
-
-<nav>
-  <a routerLink="/dvds">Dvds</a>
-  <a routerLink="/dashboard">Dashboard</a>
-</nav>
-<router-outlet></router-outlet>
-
-<!--<app-dvd></app-dvd>-->
