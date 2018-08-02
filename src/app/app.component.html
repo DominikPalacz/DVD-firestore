@@ -13,7 +13,6 @@
 
   <div class="main">
 
-
     <div class="l">
       <div class="in">
         <router-outlet></router-outlet>
@@ -24,18 +23,14 @@
 
       <div>
         <h2>Add new film</h2>
-        <input type="text" [(ngModel)]="id" name="id" placeholder="id..">
+        <input type="text" [(ngModel)]="id" name="id" placeholder="paste the address link to the picture">
         <br>
         <textarea [(ngModel)]="title" name="title" placeholder="title.."></textarea>
         <br>
         <input type="submit" value="Add a dvd" (click)="addDvd()">
       </div>
 
-
-
-
     </div>
-
 
   </div>
 
