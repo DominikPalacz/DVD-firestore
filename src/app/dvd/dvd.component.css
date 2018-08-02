@@ -30,3 +30,8 @@
 .end {
   background-color: #00b7f5;
 }
+
+span {
+  display: flex;
+  justify-content: center;
+}

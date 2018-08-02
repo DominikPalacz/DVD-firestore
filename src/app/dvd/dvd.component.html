@@ -2,7 +2,17 @@
 
   <ul class="dvd" *ngFor="let dvd of dvds | async" [class.selected]="dvd === selectedDvd">
     <li (click)="getDvd(dvd.id)" (click)="onSelect(dvd)">
-      <span><img src="{{dvd.data.id}}"></span> {{dvd.data.title}} <span><a href="#" (click)="deleteDvd(dvd.id)">Delate</a></span>
+      <span>
+        <img src="{{dvd.data.id}}">
+      </span>
+      <span>
+            {{dvd.data.title}}
+      </span>
+      <span>
+        <a href="#" (click)="deleteDvd(dvd.id)">
+          Delate
+        </a>
+      </span>
     </li>
   </ul>
 
